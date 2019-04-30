@@ -1,7 +1,7 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "basicBot";
+    var fork = "lgafcg";
 
     // Define our function responsible for extending the bot.
     function extend() {
@@ -17,12 +17,6 @@
         bot.retrieveSettings();
 
         //Extend the bot here, either by calling another function or here directly.
-
-        // You can add more spam words to the bot.
-        var spamWords = ['spam1', 'spam2', 'spam3', 'spam4'];
-        for (var i = 0; i < spamWords.length; i++) {
-          window.bot.chatUtilities.spam.push(spamWords[i]);
-        }
 
         // Example code for a bot command:
         bot.commands.baconCommand = {
@@ -46,39 +40,39 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: 'basicBot',
-        language: 'english',
-        chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
-        scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+        botName: 'lgafcg',
+        language: 'russian',
+        chatLink: 'https://rawgit.com/lgafcg/source/master/lang/en.json',
+        scriptLink: 'https://rawgit.com/lgafcg/source/master/basicBot.js',
         roomLock: false, // Requires an extension to re-load the script
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: false, // true or false
-        autowoot: true,
+        autowoot: false,
         autoskip: false,
-        smartSkip: true,
-        cmdDeletion: true,
+        smartSkip: false,
+        cmdDeletion: false,
         maximumAfk: 120,
-        afkRemoval: true,
+        afkRemoval: false,
         maximumDc: 60,
         bouncerPlus: true,
-        blacklistEnabled: true,
+        blacklistEnabled: false,
         lockdownEnabled: false,
         lockGuard: false,
-        maximumLocktime: 10,
-        cycleGuard: true,
+        maximumLocktime: 59,
+        cycleGuard: false,
         maximumCycletime: 10,
         voteSkip: false,
-        voteSkipLimit: 10,
+        voteSkipLimit: 15,
         historySkip: false,
-        timeGuard: true,
-        strictTimeGuard: true,
+        timeGuard: false,
+        strictTimeGuard: false,
         maximumSongLength: 10,
         autodisable: false,
         commandCooldown: 30,
         usercommandsEnabled: true,
-        thorCommand: false,
-        thorCooldown: 10,
+        thorCommand: true,
+        thorCooldown: 59,
         skipPosition: 3,
         skipReasons: [
             ['theme', 'This song does not fit the room theme. '],
@@ -89,14 +83,14 @@
             ['nsfw', 'The song you contained was NSFW (image or sound). '],
             ['unavailable', 'The song you played was not available for some users. ']
         ],
-        afkpositionCheck: 15,
-        afkRankCheck: 'ambassador',
-        motdEnabled: false,
-        motdInterval: 5,
-        motd: 'Temporary Message of the Day',
-        filterChat: true,
+        afkpositionCheck: 17,
+        afkRankCheck: 'bouncer',
+        motdEnabled: true,
+        motdInterval: 47,
+        motd: 'frag4mi благословил этот трек',
+        filterChat: false,
         etaRestriction: false,
-        welcome: true,
+        welcome: false,
         opLink: null,
         rulesLink: null,
         themeLink: null,
@@ -108,13 +102,13 @@
         songstats: true,
         commandLiteral: '!',
         blacklists: {
-            NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
-            OP: 'https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json',
-            BANNED: 'https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json'
+            NSFW: 'https://rawgit.com/lgafcg/custom/master/blacklists/NSFWlist.json',
+            OP: 'https://rawgit.com/lgafcg/custom/master/blacklists/OPlist.json',
+            BANNED: 'https://rawgit.com/lgafcg/custom/master/blacklists/BANNEDlist.json'
         }
     }));
 
     // Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/basicBot/source/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/lgafcg/source/master/basicBot.js", extend);
 
 }).call(this);
